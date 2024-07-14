@@ -42,7 +42,14 @@ let boards = reactive([
 
   <div class="boards-container">
     <div class="boards">
-      <div class="board" v-for="board in boards" :key="board.id"></div>
+      <div class="board" v-for="board in boards" :key="board.id">
+        <div>{{ board.name }}</div>
+        <div class="items">
+          <div class="item" v-for="item in board.items" :key="item.id">
+            {{ item.title }}
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
