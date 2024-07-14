@@ -1,5 +1,6 @@
 <script setup>
 import { reactive } from "vue";
+import InputNew from "./InputNew.vue";
 
 let boards = reactive([
   {
@@ -31,6 +32,10 @@ let boards = reactive([
     ],
   },
 ]);
+
+function handleNewItem(text) {
+  console.log(text.value);
+}
 </script>
 
 <template>
@@ -44,6 +49,7 @@ let boards = reactive([
     <div class="boards">
       <div class="board" v-for="board in boards" :key="board.id">
         <div>{{ board.name }}</div>
+        <InputNew @on-new-item="handleNewItem" />
         <div class="items">
           <div class="item" v-for="item in board.items" :key="item.id">
             {{ item.title }}
