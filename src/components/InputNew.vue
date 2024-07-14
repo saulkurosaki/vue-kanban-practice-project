@@ -1,11 +1,14 @@
 <script setup>
-import { ref } from "@vue/reactivity";
+import { ref, defineEmits } from "vue";
 
 const text = ref();
+const emits = defineEmits(["onNewItem"]);
 
 function handleSubmit() {
   if (text !== "") {
     //mandar a llamar el emit
+    emits("onNewItem", text);
+    text.value = "";
   }
 }
 </script>
