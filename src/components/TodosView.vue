@@ -67,7 +67,11 @@ function onDrop(event, dest) {
   const originBoard = boards.find((board) => board.id === boardId);
   const originItem = originBoard.items.find((item) => item.id === itemId);
 
-  console.log(originBoard.name, originItem.title);
+  // Push the item within the destiny board
+  dest.items.push({ ...originItem });
+
+  // Delete the item from the origin board
+  originBoard.items = originBoard.items.filter((item) => item !== originItem);
 }
 </script>
 
