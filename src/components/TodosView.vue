@@ -40,11 +40,11 @@ let boards = reactive([
     </ul>
   </nav>
 
-  <!-- <div class="boards-container">
+  <div class="boards-container">
     <div class="boards">
       <div class="board" v-for="board in boards" :key="board.id"></div>
     </div>
-  </div> -->
+  </div>
 </template>
 
 <style scoped></style>
