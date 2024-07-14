@@ -54,4 +54,54 @@ let boards = reactive([
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: indigo;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+nav a {
+  color: rgb(2, 204, 2);
+  font-size: x-large;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: rgb(1, 168, 1);
+}
+
+.boards {
+  display: flex;
+  gap: 10px;
+  margin-top: 70px;
+}
+
+.board {
+  background-color: #efefef;
+  padding: 10px;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.item {
+  background-color: white;
+  padding: 10px;
+  box-sizing: border-box;
+}
+</style>
