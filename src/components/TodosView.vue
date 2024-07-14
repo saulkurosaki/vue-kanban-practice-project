@@ -64,7 +64,10 @@ function onDrop(event, dest) {
     event.dataTransfer.getData("text/plain")
   );
 
-  console.log(boardId, itemId);
+  const originBoard = boards.find((board) => board.id === boardId);
+  const originItem = originBoard.items.find((item) => item.id === itemId);
+
+  console.log(originBoard.name, originItem.title);
 }
 </script>
 
