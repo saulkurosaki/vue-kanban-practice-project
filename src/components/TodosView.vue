@@ -33,6 +33,18 @@ let boards = reactive([
 ]);
 </script>
 
-<template></template>
+<template>
+  <nav>
+    <ul>
+      <li><a href="#">Create Board</a></li>
+    </ul>
+  </nav>
+
+  <!-- <div class="boards-container">
+    <div class="boards">
+      <div class="board" v-for="board in boards" :key="board.id"></div>
+    </div>
+  </div> -->
+</template>
 
 <style scoped></style>
